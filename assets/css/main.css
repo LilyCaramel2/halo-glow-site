@@ -22,4 +22,241 @@ body {
 /* Outer background and poster container */
 
 .page-background {
-  min-height
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.page-wrap {
+  background: #fdf7f2;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(32, 16, 24, 0.22);
+  overflow: hidden;
+  width: min(900px, 92vw);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Generic bands */
+
+.band {
+  padding-inline: 40px;
+}
+
+.band-hero {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  background: radial-gradient(circle at top left, #fde6dd 0%, #fdf7f2 55%, #f9eee7 100%);
+}
+
+.band-services {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: linear-gradient(135deg, #f9d9ce 0%, #fbe4da 40%, #f9efe8 100%);
+}
+
+.band-contact {
+  padding: 0;
+}
+
+/* Hero band */
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 32px;
+  align-items: center;
+}
+
+.brand-line {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  color: #3a1e26;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+  color: #5a3a45;
+}
+
+.hero-heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0 0 10px;
+  color: #2b1822;
+}
+
+.hero-subline {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #4a2c37;
+}
+
+.hero-image-frame {
+  background: #fdf7f2;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 10px 28px rgba(36, 20, 28, 0.18);
+  max-height: 320px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Services band */
+
+.services-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Simple middle services band */
+
+.simple-services {
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.simple-services-heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+  color: #2b1822;
+}
+
+.simple-services-line {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #3a1e26;
+}
+
+/* Contact band */
+
+.contact-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contact-image-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.contact-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(40, 18, 28, 0.65), rgba(80, 40, 52, 0.4));
+}
+
+.contact-card {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  margin: 18px auto;
+  padding: 16px 22px 14px;
+  background: rgba(252, 244, 236, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(12, 3, 8, 0.55);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #2b1822;
+}
+
+.contact-brand {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+.contact-line {
+  margin: 2px 0;
+}
+
+.contact-link {
+  color: #7c3b52;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-cta {
+  margin: 8px 0 4px;
+  font-weight: 600;
+  color: #3a1e26;
+}
+
+.contact-bottom-line {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #5f404c;
+}
+
+/* Responsiveness */
+
+@media (max-width: 880px) {
+  .page-wrap {
+    width: 96vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .band {
+    padding-inline: 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .hero-image-frame {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-card {
+    margin-inline: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.3rem;
+  }
+
+  .hero-subline,
+  .tagline {
+    font-size: 0.82rem;
+  }
+
+  .simple-services-line {
+    font-size: 0.8rem;
+  }
+}

@@ -47,4 +47,204 @@ body {
 
 /* Top hero strip */
 .poster-hero {
-  display
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  min-height: 260px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image {
+  background-image: url("../images/Halo Glow – Serene Facial Hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  padding: 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Main title & hero copy */
+.hero-text h1 {
+  font-size: 40px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-weight: 800;
+  color: #3B3027;
+  text-shadow:
+    0 0 10px rgba(255, 243, 225, 0.9),
+    0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-tagline {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: var(--halo-gold);
+}
+
+.hero-sub {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Lower body grid */
+.poster-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Menu panel */
+.poster-panel.menu h2 {
+  font-size: 20px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.poster-panel.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.poster-panel.menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(59,48,39,0.18);
+  padding: 6px 0;
+  letter-spacing: 0.04em;
+}
+
+/* left side: treatment name/description */
+.poster-panel.menu li .item-title {
+  display: block;
+  font-weight: 600;
+}
+
+.poster-panel.menu li .item-note {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* right side: price */
+.poster-panel.menu li .price {
+  font-weight: 700;
+  color: var(--halo-gold);
+  margin-left: 16px;
+  white-space: nowrap;
+}
+
+/* Visuals panel (right side) */
+.poster-panel.visuals {
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.visual.main {
+  flex: 1;
+  min-height: 180px;
+  background-image: url("../images/Halo Glow – Mani-Pedi Care Portrait.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.visual-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.visual.small {
+  min-height: 110px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.visual.small.hands {
+  background-image: url("../images/Halo Glow – Mani-Pedi Care Portrait.png");
+}
+
+.visual.small.towel {
+  background-image: url("../images/Halo Glow – Towel & Candle Detail.png");
+}
+
+/* Info panel */
+.poster-panel.info {
+  grid-column: 1 / 2;
+  align-self: end;
+  font-size: 13px;
+}
+
+.poster-panel.info h3 {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.poster-panel.info .name {
+  font-size: 22px;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.poster-panel.info p {
+  margin: 0 0 3px;
+}
+
+/* Simple header/footer styling for partials */
+.site-header,
+.site-footer {
+  max-width: 794px;
+  margin: 0 auto 8px;
+  padding: 8px 0;
+  font-size: 12px;
+  text-align: center;
+  color: #3B3027;
+}
+
+.site-header .logo-wordmark {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--halo-gold);
+}
+
+.site-nav a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #3B3027;
+  font-size: 12px;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--halo-gold);
+}

@@ -1,133 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Halo Glow | Facials, Waxing, Hands &amp; Feet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Local Muizenberg facial studio for all ages. Gentle, affordable skin and body care for women, men and teens." />
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-  <main>
-    <section class="halo-poster" aria-label="Halo Glow facial &amp; spa poster">
-      <!-- HERO: full-bleed image with text overlay -->
-      <div class="poster-hero">
-        <div class="hero-image" role="img"
-             aria-label="Relaxing facial treatment at Halo Glow"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-          <p class="hero-tagline">LOCAL • GENTLE • AFFORDABLE</p>
-          <h1>HALO GLOW</h1>
-          <p class="hero-sub">
-            A friendly Muizenberg studio offering soft, glowing skin care for
-            women, men and teens. Thoughtful facials, calming body rituals and
-            mani‑pedis that feel luxe without luxury prices.
-          </p>
-        </div>
-      </div>
+  <meta charset="UTF-8">
+  <title>Halo Glow – Beauty by Kelly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- BODY -->
-      <div class="poster-body">
-        <!-- FACIAL & SPA MENU -->
-        <section class="poster-panel menu" aria-label="Facial &amp; spa menu">
-          <h2>FACIAL &amp; SPA MENU</h2>
-          <ul>
-            <li>
-              <div>
-                <span class="item-title">Halo Glow Signature Facial</span>
-                <span class="item-note">
-                  Deep cleanse, gentle exfoliation, glow mask &amp; slow facial massage.
-                  Ideal reset for tired, stressed skin.
-                </span>
-              </div>
-              <span class="price">R580 • 60 min</span>
-            </li>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-            <li>
-              <div>
-                <span class="item-title">Express Refresh Facial</span>
-                <span class="item-note">
-                  Quick cleanse, exfoliation &amp; hydration boost. Perfect for after work
-                  or between school runs.
-                </span>
-              </div>
-              <span class="price">R380 • 30 min</span>
-            </li>
+  <style>
+    :root {
+      --bg-peach: #f6e0d5;        /* main page background, soft peach */
+      --card-cream: #fff7f2;      /* lighter cards */
+      --accent-gold: #f2b777;     /* peach-gold accent */
+      --text-main: #24181a;       /* near-black plum-brown, for strong contrast */
+      --text-soft: #5a3b40;       /* softer headings */
+      --pill-peach: #f9d0b3;      /* hero pill */
+      --border-soft: rgba(90, 59, 64, 0.18);
+    }
 
-            <li>
-              <div>
-                <span class="item-title">Calm &amp; Soothe Facial</span>
-                <span class="item-note">
-                  Barrier‑kind facial for sensitive, teen or reactive skin. No harsh
-                  peels, just calm, cool comfort.
-                </span>
-              </div>
-              <span class="price">R620 • 60 min</span>
-            </li>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-            <li>
-              <div>
-                <span class="item-title">Back Glow Polish</span>
-                <span class="item-note">
-                  Exfoliation, mask &amp; massage for a smooth, confident back.
-                  Great before beach days and events.
-                </span>
-              </div>
-              <span class="price">R520 • 45 min</span>
-            </li>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #ffe9d6 0%, var(--bg-peach) 40%, #f3d6c7 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
 
-            <li>
-              <div>
-                <span class="item-title">Halo Hands &amp; Feet Ritual</span>
-                <span class="item-note">
-                  Soak, scrub, mask &amp; massage with nourishing oils.
-                  Lovely for couples, friends or solo time.
-                </span>
-              </div>
-              <span class="price">R480 • 60 min</span>
-            </li>
+    .poster {
+      max-width: 1024px;
+      width: 100%;
+      background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.02));
+      box-shadow: 0 28px 80px rgba(0,0,0,0.16);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.65);
+      display: flex;
+      flex-direction: row;
+    }
 
-            <li>
-              <div>
-                <span class="item-title">Soft Strip Waxing</span>
-                <span class="item-note">
-                  Brows, lip, underarm &amp; full leg packages. Gentle, quick and
-                  welcoming for first‑timers.
-                </span>
-              </div>
-              <span class="price">From R120</span>
-            </li>
-          </ul>
-        </section>
+    /* Layout: left hero column, right info column */
+    .poster-left,
+    .poster-right {
+      padding: 28px 28px 32px;
+    }
 
-        <!-- VISUAL PANEL -->
-        <aside class="poster-panel visuals" aria-label="Halo Glow visuals">
-          <div class="visual main"></div>
-        </aside>
+    .poster-left {
+      flex: 0 0 40%;
+      border-right: 1px solid rgba(255,255,255,0.6);
+      background: radial-gradient(circle at top left, #ffe1c8 0%, #f5d1c0 45%, #f1c3b5 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        <!-- STUDIO DETAILS -->
-        <section class="poster-panel info" aria-label="Studio details">
-          <h3>STUDIO DETAILS</h3>
-          <p class="name">Halo Glow Muizenberg</p>
-          <p>Beach‑side studio • Muizenberg, Cape Town</p>
-          <p>By appointment only • Day &amp; early evening slots</p>
-          <p>In‑studio &amp; mobile: Kelly travels to hotels, homes and guesthouses on request.</p>
-          <p>WhatsApp: 0X XXXXXXXX</p>
-          <p>Instagram: @haloglow.muizenberg</p>
-          <p>Email: hello@haloglow.co.za</p>
-        </section>
-      </div>
+    .logo-lockup {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-      <!-- CTA BAND -->
-      <div class="poster-cta">
-        <div class="poster-cta-text">
-          Book your glow now
-        </div>
-        <div class="poster-cta-action">
-          Studio or mobile visits • WhatsApp 0X XXXXXXXX • @haloglow.muizenberg
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.02);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(10, 6, 6, 0.5) 0%, rgba(10, 6, 6, 0.2) 55%, transparent 100%);
+    }
+
+    .hero-copy {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      color: #fdf7f5;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, var(--pill-peach), var(--accent-gold));
+      color: #3b2626;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      opacity: 0.96;
+    }
+
+    .hero-location {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-top: 6px;
+    }
+
+    .left-note {
+      margin-top: 8px;
+      font-size: 0.78rem;
+      opacity: 0.9;
+    }
+
+    .poster-right {
+      flex: 0 0 60%;
+      background: rgba(255,255,255,0.55);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .service-card {
+      background: var(--card-cream);
+      border-radius: 20px;
+      padding: 16px 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-soft);
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+      color: var(--text-soft);
+    }
+
+    .service-card p.subhead {
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+      opacity: 0.85;
+    }
+
+    .service-list {
+      list-style: none;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .service-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 3px 0;
+    }
+
+    .service-name {
+      max-width: 70%;
+    }
+
+    .service-price {
+      font-weight: 600;
+    }
+
+    .mani-block {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .mani-image {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 140px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .mani-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wax-pack-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 16px;
+      font-size: 0.78rem;
+    }
+
+    .wax-pack-grid strong {
+      font-weight: 600;
+    }
+
+    /* Contact band */
+
+    .contact-band {
+      margin-top: 4px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      background: linear-gradient(120deg, #f0b88a, #f4c99d, #fbe0b9);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+    }
+
+    .contact-info {
+      padding: 14px 18px;
+      color: #3b2620;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-lines {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .contact-cta {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-image {
+      position: relative;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.1);
+    }
+
+    .contact-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
+      mix-blend-mode: soft-light;
+    }
+
+    @media (max-width: 880px) {
+      .poster {
+        flex-direction: column;
+      }
+      .poster-left {
+        border

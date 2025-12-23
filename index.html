@@ -1,407 +1,63 @@
-/* Base layout */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #2e1720; /* deep plum / near-black */
-  background-color: #fffaf7;
-  -webkit-font-smoothing: antialiased;
-}
-
-.page-wrap {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Common typography */
-
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  color: #2b1822;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-/* Band 1: Hero */
-
-.hero {
-  padding: 3.5rem 1.75rem 3rem;
-  background: radial-gradient(circle at top left, #ffe4d3 0, #ffece0 30%, #fff9f4 70%);
-}
-
-.hero-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.hero-copy {
-  max-width: 560px;
-}
-
-.hero-brand {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  color: #7a4b55;
-  margin-bottom: 0.75rem;
-}
-
-.hero-tagline {
-  font-size: 0.95rem;
-  color: #5e3a42;
-  margin-bottom: 0.75rem;
-}
-
-.hero-heading {
-  font-size: clamp(2.4rem, 3vw + 1rem, 3rem);
-  line-height: 1.12;
-  margin-bottom: 0.85rem;
-}
-
-.hero-subline {
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: #4f333a;
-  max-width: 32rem;
-}
-
-.hero-image-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image {
-  display: block;
-  width: 100%;
-  max-width: 430px;
-  border-radius: 1.5rem;
-  box-shadow:
-    0 18px 45px rgba(92, 57, 60, 0.28),
-    0 0 0 1px rgba(255, 245, 237, 0.8);
-}
-
-/* Band 2: Services */
-
-.services-band {
-  background: linear-gradient(135deg, #ffe3d5 0%, #ffd9e0 40%, #ffe9cf 100%);
-  padding: 3rem 1.5rem 3.25rem;
-}
-
-.services-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 1.75rem;
-  margin-bottom: 2.5rem;
-}
-
-/* Service cards */
-
-.service-card {
-  border-radius: 1.4rem;
-  padding: 1.5rem 1.5rem 1.6rem;
-  box-shadow: 0 12px 30px rgba(120, 68, 66, 0.18);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Slightly different warm tones per card */
-.card-facials {
-  background: linear-gradient(145deg, #ffe9dd 0%, #ffe1d0 100%);
-}
-
-.card-body {
-  background: linear-gradient(145deg, #ffe6e9 0%, #ffd7dd 100%);
-}
-
-.card-hands-feet {
-  background: linear-gradient(145deg, #ffeeda 0%, #ffe0c0 100%);
-}
-
-.card-waxing {
-  background: linear-gradient(145deg, #ffe8e1 0%, #ffe1d7 100%);
-}
-
-.service-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.9rem;
-}
-
-.service-list {
-  list-style: none;
-  margin: 0 0 0.9rem;
-  padding: 0;
-}
-
-.service-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 0.93rem;
-  color: #43242c;
-  gap: 0.75rem;
-  padding: 0.12rem 0;
-}
-
-.service-name {
-  flex: 1 1 auto;
-}
-
-.service-price {
-  flex: 0 0 auto;
-  font-weight: 600;
-  color: #3a1e26;
-}
-
-.service-note {
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: #6a424b;
-}
-
-/* Hands & Feet media layout */
-
-.card-hands-feet {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
-  gap: 1rem;
-  align-items: stretch;
-}
-
-.card-media {
-  border-radius: 1.1rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.card-media-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.02);
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Packages block */
-
-.package-block {
-  margin-top: 0.6rem;
-}
-
-.package-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #6c3e45;
-  margin: 0 0 0.35rem;
-}
-
-.package-list {
-  list-style: none;
-  margin: 0 0 0.7rem;
-  padding: 0;
-}
-
-.package-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 0.9rem;
-  color: #42242b;
-  gap: 0.75rem;
-  padding: 0.12rem 0;
-}
-
-/* Why locals love Halo Glow */
-
-.why-locals {
-  background: rgba(255, 249, 244, 0.92);
-  border-radius: 1.5rem;
-  padding: 1.4rem 1.5rem 1.3rem;
-  box-shadow: 0 10px 26px rgba(115, 68, 66, 0.17);
-  color: #43252d;
-  font-size: 0.92rem;
-  line-height: 1.7;
-}
-
-.why-locals p + p {
-  margin-top: 0.6rem;
-}
-
-.why-visitors {
-  font-style: italic;
-  color: #6d4048;
-}
-
-/* Band 3: Contact */
-
-.contact-band {
-  position: relative;
-  min-height: 26vh;
-  background-color: #1a1013;
-  background-image: url("../images/Halo Glow – Towel & Candle Detail.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: stretch;
-}
-
-.contact-overlay {
-  width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(22, 9, 15, 0.35) 0%,
-    rgba(22, 9, 15, 0.6) 40%,
-    rgba(22, 9, 15, 0.8) 100%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.6rem 1.5rem 2.8rem;
-}
-
-.contact-card {
-  max-width: 520px;
-  width: 100%;
-  padding: 1.8rem 1.9rem 1.6rem;
-  border-radius: 1.6rem;
-  background: rgba(255, 247, 239, 0.96);
-  box-shadow:
-    0 20px 45px rgba(6, 1, 4, 0.6),
-    0 0 0 1px rgba(255, 248, 241, 0.9);
-  text-align: center;
-}
-
-.contact-brand {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #2c171f;
-  margin-bottom: 0.4rem;
-}
-
-.contact-location {
-  font-size: 0.9rem;
-  color: #63424b;
-  margin-bottom: 0.9rem;
-}
-
-.contact-detail {
-  font-size: 0.95rem;
-  color: #3c2127;
-  margin-bottom: 0.3rem;
-}
-
-.contact-detail a {
-  color: #3c2127;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(115, 73, 80, 0.5);
-}
-
-.contact-detail a:hover {
-  border-bottom-color: rgba(115, 73, 80, 0.9);
-}
-
-.contact-cta {
-  margin-top: 0.9rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2b171e;
-}
-
-.contact-small {
-  margin-top: 0.7rem;
-  font-size: 0.8rem;
-  color: #6a444c;
-}
-
-/* Responsive adjustments */
-
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: minmax(0, 1.1fr);
-  }
-
-  .hero-image-wrap {
-    order: -1;
-    margin-bottom: 1.3rem;
-  }
-
-  .hero {
-    padding-top: 2.7rem;
-  }
-
-  .services-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .card-hands-feet {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 2.3rem 1.2rem 2.3rem;
-  }
-
-  .hero-heading {
-    font-size: 2.1rem;
-  }
-
-  .services-band {
-    padding: 2.4rem 1.2rem 2.6rem;
-  }
-
-  .service-card {
-    padding: 1.3rem 1.25rem 1.4rem;
-  }
-
-  .why-locals {
-    padding: 1.25rem 1.25rem 1.2rem;
-  }
-
-  .contact-overlay {
-    padding: 2.3rem 1.2rem 2.4rem;
-  }
-
-  .contact-card {
-    padding: 1.6rem 1.45rem 1.5rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo Glow – Beauty by Kelly</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="page-background">
+    <div class="page-wrap">
+
+      <!-- Band 1: Hero -->
+      <header class="band band-hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="brand-line">Halo Glow – Beauty by Kelly</p>
+            <p class="tagline">Gentle, affordable beauty in a calm studio.</p>
+            <h1 class="hero-heading">Everyday luxury for soft, glowing skin.</h1>
+            <p class="hero-subline">
+              Facials, massage, mani-pedi and waxing in a warm, friendly studio where you feel cared for, never rushed.
+            </p>
+          </div>
+          <div class="hero-image-frame">
+            <img
+              src="assets/images/Halo Glow – Serene Facial Hero.png"
+              alt="Relaxing facial treatment at Halo Glow studio"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Band 2: Services -->
+      <main class="band band-services">
+        <div class="services-inner">
+          <div class="services-grid">
+            <!-- Facials card -->
+            <section class="service-card card-facials">
+              <h2 class="card-title">Facials</h2>
+              <ul class="service-list">
+                <li class="service-item">
+                  <span class="service-name">Classic Facial</span>
+                  <span class="service-price">R550</span>
+                </li>
+                <li class="service-note">
+                  Luxurious face &amp; decollette treatment with steamer, massage and extraction (1 hour).
+                </li>
+
+                <li class="service-item">
+                  <span class="service-name">Halo Facial</span>
+                  <span class="service-price">R450</span>
+                </li>
+                <li class="service-note">
+                  Signature facial with steamer, face massage and hand massage (45 minutes).
+                </li>
+
+                <li class="service

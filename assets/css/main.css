@@ -1,260 +1,102 @@
-/* ---------- BASE + COLOUR ---------- */
-
 :root {
-  --halo-bg:    #f7f1e9;  /* poster background */
-  --halo-shell: #f0ebe4;  /* page background */
-  --halo-ink:   #283036;  /* deep charcoal text */
-  --halo-rose:  #e2a7b3;  /* blush accent */
-  --halo-gold:  #d9a96b;  /* warm metallic accent */
+  --bg-peach: #f6e0d5;        /* main page background, soft peach */
+  --card-cream: #fff7f2;      /* lighter cards */
+  --accent-gold: #f2b777;     /* peach-gold accent */
+  --text-main: #24181a;       /* near-black for strong contrast */
+  --text-soft: #5a3b40;       /* softer headings */
+  --pill-peach: #f9d0b3;      /* hero pill */
+  --border-soft: rgba(90, 59, 64, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--halo-shell);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #ffe9d6 0%, var(--bg-peach) 40%, #f3d6c7 100%);
+  color: var(--text-main);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 24px;
-  box-sizing: border-box;
-  color: var(--halo-ink);
+  padding: 32px 16px;
 }
 
-/* ---------- POSTER CONTAINER (A4) ---------- */
+/* Poster shell */
 
-.halo-poster {
-  width: 794px;          /* A4 at ~96dpi */
-  height: 1123px;
-  background: var(--halo-bg);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+.poster {
+  max-width: 1024px;
+  width: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.16);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  display: flex;
+  flex-direction: row;
+}
+
+/* Layout: left hero column, right info column */
+
+.poster-left,
+.poster-right {
+  padding: 28px 28px 32px;
+}
+
+.poster-left {
+  flex: 0 0 40%;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  background: radial-gradient(circle at top left, #ffe1c8 0%, #f5d1c0 45%, #f1c3b5 100%);
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+/* Branding */
+
+.logo-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Hero card */
+
+.hero-card {
   position: relative;
+  border-radius: 22px;
   overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* Soft halo glow behind hero */
-.halo-poster::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 420px;
-  background: radial-gradient(
-    circle at 20% 30%,
-    rgba(255, 243, 225, 0.9),
-    rgba(247, 241, 233, 0) 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ---------- FULL-BLEED HERO ---------- */
-
-.poster-hero {
-  position: relative;
-  min-height: 420px;
-  z-index: 1;
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-  background-image: url("../images/Halo Glow – Serene Facial Hero.png");
-  background-size: cover;
-  background-position: center;
+.hero-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.02);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.35) 40%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
+  background: linear-gradient(160deg, rgba(10, 6, 6, 0.5) 0%, rgba(10, 6, 6, 0.2) 55%, transparent 100%);
 }
 
-.hero-text {
-  position: relative;
-  z-index: 1;
-  padding: 56px 64px;
-  max-width: 520px;
-}
-
-/* Tagline, title, subcopy */
-
-.hero-tagline {
-  font-size: 14px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  color: var(--halo-rose);
-}
-
-.hero-text h1 {
-  font-size: 56px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  font-weight: 800;
-  color: #ffffff;
-  text-shadow:
-    0 0 10px rgba(0,0,0,0.6),
-    0 14px 36px rgba(0,0,0,0.75);
-}
-
-.hero-sub {
-  font-size: 18px;
-  line-height: 1.8;
-  margin: 0;
-  color: #fefdfb;
-  text-shadow: 0 10px 28px rgba(0,0,0,0.65);
-}
-
-/* ---------- BODY GRID ---------- */
-
-.poster-body {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* wider menu column */
-  grid-template-rows: auto auto;
-  gap: 24px;
-  padding: 32px;
-  box-sizing: border-box;
-}
-
-/* ---------- MENU PANEL ---------- */
-
-.poster-panel.menu h2 {
-  font-size: 20px;
-  letter-spacing: 0.20em;
-  text-transform: uppercase;
-  margin: 0 0 14px;
-  font-weight: 800;
-  color: var(--halo-rose);
-}
-
-.poster-panel.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-.poster-panel.menu li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: 1px solid rgba(40,48,54,0.14);
-  padding: 8px 0;
-  letter-spacing: 0.04em;
-}
-
-.poster-panel.menu li .item-title {
-  display: block;
-  font-weight: 600;
-}
-
-.poster-panel.menu li .item-note {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.9;
-}
-
-.poster-panel.menu li .price {
-  font-weight: 700;
-  color: var(--halo-gold);
-  margin-left: 16px;
-  white-space: nowrap;
-}
-
-/* ---------- VISUAL PANEL ---------- */
-
-.poster-panel.visuals {
-  grid-row: 1 / span 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.visual.main {
-  flex: 1;
-  min-height: 260px;
-  background-image: url("../images/Halo Glow – Mani-Pedi Care Portrait.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
-}
-
-/* ---------- INFO PANEL ---------- */
-
-.poster-panel.info {
-  grid-column: 1 / 2;
-  align-self: start;
-  margin-top: 24px;
-  border-top: 1px solid rgba(40,48,54,0.16);
-  padding-top: 16px;
-  font-size: 13px;
-}
-
-.poster-panel.info h3 {
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin: 0 0 10px;
-  font-weight: 700;
-  color: var(--halo-rose);
-}
-
-.poster-panel.info .name {
-  font-size: 18px;
-  margin: 0 0 6px;
-  font-weight: 700;
-}
-
-.poster-panel.info p {
-  margin: 0 0 4px;
-  font-size: 12px;
-}
-
-/* ---------- CTA BAND ---------- */
-
-.poster-cta {
-  margin: 0 32px 32px;
-  padding: 14px 20px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--halo-rose), var(--halo-gold));
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-}
-
-.poster-cta-text {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.poster-cta-action {
-  font-weight: 500;
-}
-
-/* ---------- PRINT TWEAKS ---------- */
-
-@media print {
-  body {
-    background: #ffffff;
-    padding: 0;
-  }
-
-  .halo-poster {
-    box-shadow: none;
-    margin: 0 auto;
-  }
-}
+.hero-copy {
+  position

@@ -19,15 +19,7 @@ body {
   color: #2b1822;
 }
 
-/* Outer background and A4 poster container */
+/* Outer background and poster container */
 
 .page-background {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
-
-.page-wrap {
-  background
+  min-height

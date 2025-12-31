@@ -1,1 +1,28 @@
+/* ---------- Fonts & base ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;500;700&display=swap');
+
+:root {
+  --peach: #FCCDB7;
+  --blush: #F5C6BC;
+  --cream: #FFF8F0;
+  --deep-plum: #2b1822;
+  --rich-chocolate: #5C342E;
+  --text-body: #5C342E;
+  --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 
 

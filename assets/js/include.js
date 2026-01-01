@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         target.innerHTML = html;
         
         // Initialize mobile menu after header loads
-        if (id === 'header-include') {
+        if (id === 'site-header') {
           initMobileMenu();
         }
       })
@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  loadPartial('header-include', '/partials/header.html');
-  loadPartial('footer-include', '/partials/footer.html');
+  loadPartial('site-header', '/partials/header.html');
+  loadPartial('site-footer', '/partials/footer.html');
 });

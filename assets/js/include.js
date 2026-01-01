@@ -2,9 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerContainer = document.getElementById('site-header');
   var footerContainer = document.getElementById('site-footer');
 
+  // Load header partial
   if (headerContainer) {
-    fetch('/partials/header.html')
-      .then(function (response) { return response.text(); })
+    fetch('partials/header.html')
+      .then(function (response) {
+        return response.text();
+      })
       .then(function (html) {
         headerContainer.innerHTML = html;
         setupNavToggle();
@@ -14,9 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
+  // Load footer partial
   if (footerContainer) {
-    fetch('/partials/footer.html')
-      .then(function (response) { return response.text(); })
+    fetch('partials/footer.html')
+      .then(function (response) {
+        return response.text();
+      })
       .then(function (html) {
         footerContainer.innerHTML = html;
       })
@@ -26,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setupNavToggle() {
-    var navToggle = document.querySelector('.nav-toggle');
-    var navPanel = document.querySelector('.nav-panel');
+    var navToggle  = document.querySelector('.nav-toggle');
+    var navPanel   = document.querySelector('.nav-panel');
     var navOverlay = document.querySelector('.nav-overlay');
 
     if (!navToggle || !navPanel) return;

@@ -2,42 +2,29 @@
   <div class="header-gradient"></div>
 
   <div class="header-inner">
-    <div class="header-left">
-      <a href="index.html" class="logo-link" aria-label="Halo Glow Beauty home">
-        <img
-          src="assets/images/halo-glow-beauty-logo-dark.webp"
-          alt="Halo Glow Beauty logo"
-          class="logo-desktop"
-          loading="lazy"
-        />
-        <img
-          src="assets/images/halo-glow-beauty-logo-dark-mobile.webp"
-          alt="Halo Glow Beauty logo"
-          class="logo-mobile"
-          loading="lazy"
-        />
-      </a>
-    </div>
+    <a href="/index.html" class="logo-link" aria-label="Halo Glow Beauty home">
+      <img
+        src="/assets/images/halo-glow-beauty-logo-dark.webp"
+        alt="Halo Glow Beauty logo"
+        class="logo-desktop"
+        loading="lazy"
+      />
+      <img
+        src="/assets/images/halo-glow-beauty-logo-dark-mobile.webp"
+        alt="Halo Glow Beauty logo"
+        class="logo-mobile"
+        loading="lazy"
+      />
+    </a>
 
-    <button
-      class="burger-menu"
-      type="button"
-      aria-label="Toggle navigation"
-      aria-expanded="false"
-      aria-controls="primary-navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation">
+    <nav class="main-nav" aria-label="Primary navigation">
       <ul class="nav-list">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link">Treatments</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/services.html" class="nav-link">Treatments</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="/privacy.html" class="nav-link">Privacy</a></li>
       </ul>
+
       <a
         href="https://wa.me/27737368023"
         class="nav-cta"
@@ -47,27 +34,40 @@
         WhatsApp to book
       </a>
     </nav>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
   </div>
 
-  <script>
-    (function () {
-      const burger = document.querySelector('.burger-menu');
-      const nav = document.querySelector('.main-nav');
+  <div class="nav-overlay"></div>
 
-      if (!burger || !nav) return;
-
-      burger.addEventListener('click', function () {
-        const isOpen = burger.getAttribute('aria-expanded') === 'true';
-        burger.setAttribute('aria-expanded', String(!isOpen));
-        nav.classList.toggle('nav-open', !isOpen);
-      });
-
-      nav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          burger.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('nav-open');
-        });
-      });
-    })();
-  </script>
+  <nav
+    class="nav-panel"
+    id="mobile-navigation"
+    aria-label="Mobile navigation"
+  >
+    <ul class="nav-panel-list">
+      <li><a href="/index.html" class="nav-panel-link">Home</a></li>
+      <li><a href="/services.html" class="nav-panel-link">Treatments</a></li>
+      <li><a href="/contact.html" class="nav-panel-link">Contact</a></li>
+      <li><a href="/privacy.html" class="nav-panel-link">Privacy</a></li>
+    </ul>
+    <a
+      href="https://wa.me/27737368023"
+      class="nav-panel-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp to book
+    </a>
+  </nav>
 </header>

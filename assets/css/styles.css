@@ -1,4 +1,4 @@
-/* assets/css/styles.css - Part 1 */
+/* assets/css/styles.css */
 
 /* ------------ Root + Reset ------------ */
 
@@ -8,7 +8,6 @@
   --cream: #fff8f0;
   --deep-plum: #2b1822;
   --rich-chocolate: #5c342e;
-
   --max-width: 1120px;
   --radius-soft: 12px;
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.18);
@@ -128,7 +127,6 @@ main {
 }
 
 /* Nav + menu toggle */
-
 .menu-toggle {
   display: none;
   background: none;
@@ -169,9 +167,9 @@ main {
   position: relative;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: var(--rich-chocolate);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .nav-link::after {
@@ -191,7 +189,6 @@ main {
 }
 
 /* Header WhatsApp button – smaller + subtle */
-
 .header-cta {
   margin-left: auto;
 }
@@ -200,11 +197,10 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   border-radius: 999px;
   border: 1px solid rgba(43, 24, 34, 0.25);
   background: linear-gradient(
@@ -231,7 +227,6 @@ main {
 }
 
 /* Mobile header layout */
-
 @media (max-width: 767px) {
   .header-inner {
     padding: 0.55rem 1rem;
@@ -295,22 +290,23 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
-      120deg,
-      rgba(43, 24, 34, 0.82),
-      rgba(43, 24, 34, 0.68),
-      rgba(92, 52, 46, 0.7)
-    ),
-    radial-gradient(circle at top left, rgba(252, 205, 183, 0.35), transparent);
+    120deg,
+    rgba(43, 24, 34, 0.75),
+    rgba(43, 24, 34, 0.6),
+    rgba(92, 52, 46, 0.65)
+  ),
+  radial-gradient(circle at top left, rgba(252, 205, 183, 0.25), transparent);
 }
 
 /* Hero content overlaying image */
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -324,11 +320,11 @@ main {
 }
 
 .hero-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
   margin: 0 0 0.8rem;
-  color: rgba(255, 248, 240, 0.76);
+  color: rgba(255, 248, 240, 0.8);
+  font-weight: 500;
 }
 
 .hero h1 {
@@ -337,7 +333,7 @@ main {
 
 .hero-subtitle {
   margin: 0 0 0.85rem;
-  color: rgba(255, 248, 240, 0.9);
+  color: rgba(255, 248, 240, 0.95);
 }
 
 .hero-intro {
@@ -353,17 +349,15 @@ main {
 }
 
 /* CTA buttons – refined size */
-
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.1rem;
-  font-size: 0.9rem;
+  padding: 0.65rem 1.3rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   border-radius: 999px;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
@@ -398,7 +392,6 @@ main {
 }
 
 /* Hero responsive tweaks */
-
 @media (max-width: 767px) {
   .hero {
     min-height: 82vh;
@@ -436,11 +429,11 @@ main {
 }
 
 .home-section:nth-of-type(even) {
-  background: rgba(255, 248, 240, 0.82);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .home-section:nth-of-type(odd) {
-  background: rgba(252, 205, 183, 0.22);
+  background: rgba(252, 205, 183, 0.15);
 }
 
 .home-section p {
@@ -448,7 +441,6 @@ main {
 }
 
 /* Difference grid */
-
 .difference-grid {
   display: grid;
   gap: 1.6rem;
@@ -463,7 +455,6 @@ main {
 }
 
 /* Life stages */
-
 .stages-grid {
   display: grid;
   gap: 1.6rem;
@@ -478,7 +469,6 @@ main {
 }
 
 /* Tourists */
-
 .tourist-grid {
   display: grid;
   gap: 1.6rem;
@@ -493,7 +483,6 @@ main {
 }
 
 /* Treatments list */
-
 .treatment-list {
   margin: 1.25rem 0 0.5rem;
   padding-left: 1.1rem;
@@ -504,7 +493,6 @@ main {
 }
 
 /* Visit / Book */
-
 .home-visit-address {
   margin-top: 0.75rem;
 }
@@ -514,7 +502,6 @@ main {
 }
 
 /* Responsive grids */
-
 @media (min-width: 720px) {
   .difference-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -528,7 +515,6 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-/* assets/css/styles.css - Part 2 */
 
 /* ------------ Footer ------------ */
 
@@ -557,10 +543,10 @@ main {
 
 .footer-heading {
   margin: 0 0 0.8rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 248, 240, 0.85);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: rgba(255, 248, 240, 0.9);
 }
 
 .footer-text {
@@ -592,7 +578,6 @@ main {
 }
 
 /* Footer bottom bar */
-
 .footer-bottom {
   border-top: 1px solid rgba(255, 248, 240, 0.18);
   padding: 0.9rem 1.5rem 1.2rem;
@@ -624,9 +609,8 @@ main {
   gap: 0.4rem;
   color: rgba(255, 248, 240, 0.9);
   text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
 }
 
 .caramel-credit:hover,
@@ -650,7 +634,6 @@ main {
 }
 
 /* Footer responsive */
-
 @media (max-width: 860px) {
   .footer-top {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -690,8 +673,7 @@ img {
   height: auto;
 }
 
-/* Sticky mobile WhatsApp (optional existing class kept) */
-
+/* Sticky mobile WhatsApp */
 .whatsapp-float {
   position: fixed;
   right: 1.25rem;
@@ -711,11 +693,7 @@ img {
 .whatsapp-icon {
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle at 30% 30%, #ffffff, #e6e6e6);
-  border-radius: 50%;
 }
-
-/* Hide sticky WhatsApp on larger screens if desired */
 
 @media (min-width: 768px) {
   .whatsapp-float {

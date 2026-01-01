@@ -30,3 +30,375 @@ body {
   color: var(--text-body);
   background-color: var(--cream);
 }
+
+/* ---------- Typographic scale ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--rich-chocolate);
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 3.6vw, 3.8rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* ---------- Layout helpers ---------- */
+main {
+  min-height: 60vh;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 248, 240, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(92, 52, 46, 0.08);
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-desktop {
+  height: 40px;
+  display: block;
+}
+
+.logo-mobile {
+  display: none;
+  height: 32px;
+}
+
+/* Nav desktop */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--rich-chocolate);
+}
+
+.nav-link:hover {
+  color: var(--deep-plum);
+}
+
+/* Header CTA */
+.header-cta {
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease, color 0.12s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--peach), var(--blush));
+  color: var(--rich-chocolate);
+  box-shadow: 0 8px 16px rgba(92, 52, 46, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(92, 52, 46, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(92, 52, 46, 0.2);
+  color: var(--rich-chocolate);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Burger / mobile nav */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(92, 52, 46, 0.18);
+  background: rgba(255, 248, 240, 0.85);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--rich-chocolate);
+}
+
+/* ---------- Hero (home) ---------- */
+.hero {
+  padding: 4rem 1.25rem 4.5rem;
+}
+
+.hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 32rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(92, 52, 46, 0.85);
+  margin-bottom: 0.8rem;
+}
+
+.hero-text {
+  font-size: 1rem;
+  color: rgba(92, 52, 46, 0.92);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: rgba(92, 52, 46, 0.75);
+}
+
+/* Hero image */
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  border-radius: 26px;
+  object-fit: cover;
+  box-shadow:
+    0 22px 45px rgba(43, 24, 34, 0.26),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid rgba(92, 52, 46, 0.08);
+  background: linear-gradient(to top, rgba(43, 24, 34, 0.96), rgba(43, 24, 34, 0.9));
+  color: rgba(255, 255, 255, 0.9);
+  padding: 2rem 1.25rem 3.5rem;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-name {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.footer-address {
+  font-size: 0.9rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-link {
+  color: rgba(255, 248, 240, 0.96);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-meta {
+  flex-basis: 100%;
+  margin-top: 0.75rem;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Floating WhatsApp ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: #25D366;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  z-index: 40;
+}
+
+.whatsapp-icon {
+  width: 26px;
+  height: 26px;
+  background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg')
+    center/contain no-repeat;
+  filter: invert(1);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 0.6rem 1rem;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 248, 240, 0.98);
+    border-bottom: 1px solid rgba(92, 52, 46, 0.12);
+    padding: 0.75rem 1.1rem 1rem;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    padding: 3rem 1.1rem 3.25rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .hero-copy {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+}

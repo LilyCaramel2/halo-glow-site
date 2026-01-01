@@ -1,76 +1,70 @@
+<!-- partials/footer.html -->
 <footer class="site-footer">
-  <div class="footer-main">
+  <div class="footer-top">
     <div class="footer-column footer-brand">
       <h3 class="footer-heading">Halo Glow Beauty</h3>
       <p class="footer-text">
-        A calm beauty space in Muizenberg for facials, massage, waxing, and mani-pedis that leave skin softly glowing and guests feeling restored.
+        A restorative beauty experience on Main Road, Muizenberg.
       </p>
     </div>
 
     <div class="footer-column footer-contact">
-      <h3 class="footer-heading">Visit &amp; Contact</h3>
+      <h3 class="footer-heading">Contact</h3>
       <p class="footer-text">
         85 Main Road, Muizenberg, 7945
       </p>
-      <div class="footer-contact-buttons">
-        <a href="tel:+27737368023" class="footer-contact-btn">📞 Call Us</a>
-        <a
-          href="https://wa.me/27737368023"
-          class="footer-contact-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          💬 WhatsApp
+      <p class="footer-text">
+        Phone:
+        <a href="tel:+27737368023">+27 73 736 8023</a>
+      </p>
+      <p class="footer-text">
+        Email:
+        <a href="mailto:kelly@haloglow.co.za">kelly@haloglow.co.za</a>
+      </p>
+      <p class="footer-text">
+        WhatsApp:
+        <a href="https://wa.me/27737368023" target="_blank" rel="noopener">
+          Chat on WhatsApp
         </a>
-      </div>
+      </p>
     </div>
 
     <div class="footer-column footer-links">
       <h3 class="footer-heading">Quick Links</h3>
-      <ul class="footer-nav">
-        <li><a href="/index.html" class="footer-link">Home</a></li>
-        <li><a href="/services.html" class="footer-link">Treatments</a></li>
-        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+      <ul class="footer-link-list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Treatments</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
+    </div>
+
+    <div class="footer-column footer-empty">
+      <!-- Reserved for future social icons or widgets -->
     </div>
   </div>
 
   <div class="footer-bottom">
     <div class="footer-bottom-left">
-      <p class="footer-bottom-text">
-        &copy; <span id="footer-year"></span> Halo Glow Beauty. All rights reserved.
-      </p>
+      <span>© 2025 Halo Glow Beauty</span>
     </div>
-
     <div class="footer-bottom-center">
       <a
         href="https://carameldigitaldesign.online"
-        class="footer-logo-link"
-        aria-label="Site by Caramel Digital Design"
+        class="caramel-credit"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         <img
-          src="/assets/images/caramel-lotus.webp"
-          alt="Caramel Digital Design"
-          class="footer-logo"
+          src="/assets/images/caramel-logo-mark.webp"
+          alt="Caramel Digital Design logo"
+          class="caramel-logo"
           loading="lazy"
         />
-        <span class="footer-credit-text">Site by Caramel Digital</span>
+        <span>Site by Caramel Digital</span>
       </a>
     </div>
-
     <div class="footer-bottom-right">
-      <a href="/privacy.html" class="footer-bottom-link">Privacy Policy</a>
+      <a href="/privacy.html" class="footer-privacy-link">Privacy</a>
     </div>
   </div>
-
-  <script>
-    (function () {
-      var yearSpan = document.getElementById('footer-year');
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
 </footer>

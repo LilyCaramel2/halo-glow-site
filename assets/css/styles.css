@@ -1,7 +1,6 @@
 /* assets/css/styles.css */
 
 /* ------------ Root + Reset ------------ */
-
 :root {
   --peach: #fccdb7;
   --blush: #f5c6bc;
@@ -25,8 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--rich-chocolate);
@@ -35,10 +33,7 @@ body {
 }
 
 /* ------------ Typography ------------ */
-
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 0 0 0.75rem;
   color: var(--rich-chocolate);
 }
@@ -65,14 +60,12 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', sans-serif;
+  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
 /* ------------ Layout Helpers ------------ */
-
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -83,19 +76,14 @@ main {
   padding-top: 4.5rem;
 }
 
-/* ------------ Header ------------ */
-
+/* ------------ Header (PLUM BACKGROUND) ------------ */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
   backdrop-filter: blur(16px);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 248, 240, 0.96),
-    rgba(252, 205, 183, 0.96)
-  );
-  border-bottom: 1px solid rgba(91, 52, 46, 0.1);
+  background: var(--deep-plum);
+  border-bottom: 1px solid rgba(255, 248, 240, 0.2);
 }
 
 .header-inner {
@@ -141,7 +129,7 @@ main {
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--rich-chocolate);
+  background: var(--cream);
   border-radius: 999px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -167,7 +155,7 @@ main {
   position: relative;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
-  color: var(--rich-chocolate);
+  color: var(--cream);
   text-decoration: none;
   font-weight: 500;
 }
@@ -179,7 +167,7 @@ main {
   bottom: -0.25rem;
   width: 0;
   height: 2px;
-  background: var(--deep-plum);
+  background: var(--peach);
   transition: width 0.2s ease-out;
 }
 
@@ -188,7 +176,7 @@ main {
   width: 100%;
 }
 
-/* Header WhatsApp button – smaller + subtle */
+/* Header WhatsApp button */
 .header-cta {
   margin-left: auto;
 }
@@ -197,33 +185,24 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   border-radius: 999px;
-  border: 1px solid rgba(43, 24, 34, 0.25);
-  background: linear-gradient(
-    135deg,
-    rgba(245, 198, 188, 0.9),
-    rgba(252, 205, 183, 0.9)
-  );
+  border: 1px solid rgba(252, 205, 183, 0.5);
+  background: linear-gradient(135deg, var(--peach), var(--blush));
   color: var(--deep-plum);
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: background 0.2s ease, transform 0.15s ease,
-    box-shadow 0.15s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-whatsapp-header:hover,
 .btn-whatsapp-header:focus-visible {
-  background: linear-gradient(
-    135deg,
-    rgba(252, 205, 183, 1),
-    rgba(245, 198, 188, 1)
-  );
+  background: linear-gradient(135deg, var(--blush), var(--peach));
   transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
 /* Mobile header layout */
@@ -231,7 +210,7 @@ main {
   .header-inner {
     padding: 0.55rem 1rem;
   }
-
+  
   .menu-toggle {
     display: inline-flex;
   }
@@ -240,12 +219,11 @@ main {
     position: fixed;
     inset: 0;
     padding-top: 4.5rem;
-    background: radial-gradient(circle at top, var(--peach), var(--cream));
+    background: var(--deep-plum);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out,
-      visibility 0.25s;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out, visibility 0.25s;
   }
 
   .site-nav.open {
@@ -271,8 +249,7 @@ main {
   }
 }
 
-/* ------------ Hero Section ------------ */
-
+/* ------------ Hero Section (NO OVERLAY) ------------ */
 .hero {
   position: relative;
   overflow: hidden;
@@ -293,19 +270,6 @@ main {
   z-index: 0;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    120deg,
-    rgba(43, 24, 34, 0.75),
-    rgba(43, 24, 34, 0.6),
-    rgba(92, 52, 46, 0.65)
-  ),
-  radial-gradient(circle at top left, rgba(252, 205, 183, 0.25), transparent);
-}
-
 /* Hero content overlaying image */
 .hero-content {
   position: relative;
@@ -323,23 +287,34 @@ main {
   letter-spacing: 0.12em;
   font-size: 0.85rem;
   margin: 0 0 0.8rem;
-  color: rgba(255, 248, 240, 0.8);
+  color: var(--cream);
   font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
   color: var(--cream);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-subtitle {
   margin: 0 0 0.85rem;
-  color: rgba(255, 248, 240, 0.95);
+  color: var(--cream);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-intro {
   max-width: 34rem;
   margin: 0 0 1.75rem;
-  color: rgba(255, 248, 240, 0.92);
+  color: var(--cream);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtext {
+  margin-top: 0.75rem;
+  color: rgba(255, 248, 240, 0.9);
+  font-size: 0.9rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-cta-group {
@@ -348,7 +323,7 @@ main {
   gap: 0.9rem;
 }
 
-/* CTA buttons – refined size */
+/* CTA buttons */
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
@@ -360,8 +335,7 @@ main {
   letter-spacing: 0.03em;
   border-radius: 999px;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
-    box-shadow 0.15s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-primary {
@@ -423,7 +397,6 @@ main {
 }
 
 /* ------------ Home Sections ------------ */
-
 .home-section {
   padding: 3.25rem 0;
 }
@@ -515,16 +488,10 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-/* ------------ Footer ------------ */
-
+/* ------------ Footer (PLUM BACKGROUND with WhatsApp button + Logo) ------------ */
 .site-footer {
-  background: linear-gradient(
-    180deg,
-    rgba(92, 52, 46, 0.98),
-    rgba(43, 24, 34, 0.98)
-  );
-  color: rgba(255, 248, 240, 0.9);
+  background: var(--deep-plum);
+  color: var(--cream);
   padding-top: 2.5rem;
 }
 
@@ -541,22 +508,28 @@ main {
   font-size: 0.9rem;
 }
 
+.footer-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
 .footer-heading {
   margin: 0 0 0.8rem;
   font-size: 1rem;
   letter-spacing: 0.08em;
   font-weight: 600;
-  color: rgba(255, 248, 240, 0.9);
+  color: var(--cream);
 }
 
 .footer-text {
   margin: 0 0 0.3rem;
-  color: rgba(255, 248, 240, 0.78);
+  color: rgba(255, 248, 240, 0.85);
 }
 
 .footer-contact a,
 .footer-links a {
-  color: rgba(255, 248, 240, 0.92);
+  color: var(--cream);
   text-decoration: none;
 }
 
@@ -577,6 +550,37 @@ main {
   margin-top: 0.25rem;
 }
 
+/* Footer WhatsApp CTA button */
+.footer-cta {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.btn-footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--peach), var(--blush));
+  color: var(--deep-plum);
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-footer-whatsapp:hover,
+.btn-footer-whatsapp:focus-visible {
+  background: linear-gradient(135deg, var(--blush), var(--peach));
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
 /* Footer bottom bar */
 .footer-bottom {
   border-top: 1px solid rgba(255, 248, 240, 0.18);
@@ -588,7 +592,7 @@ main {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.8rem;
-  color: rgba(255, 248, 240, 0.72);
+  color: rgba(255, 248, 240, 0.75);
 }
 
 .footer-bottom-left {
@@ -607,7 +611,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: rgba(255, 248, 240, 0.9);
+  color: var(--cream);
   text-decoration: none;
   font-size: 0.8rem;
   letter-spacing: 0.06em;
@@ -624,7 +628,7 @@ main {
 }
 
 .footer-privacy-link {
-  color: rgba(255, 248, 240, 0.9);
+  color: var(--cream);
   text-decoration: none;
 }
 
@@ -658,7 +662,6 @@ main {
 }
 
 /* ------------ Utility / Global ------------ */
-
 a {
   color: var(--deep-plum);
 }

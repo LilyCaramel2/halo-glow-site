@@ -1,99 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Halo Glow Beauty | Facials &amp; Spa in Muizenberg</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Glow-restoring facials and spa rituals at Halo Glow Beauty in Muizenberg. Book a serene facial, mani-pedi, or full glow ritual."
-  >
+  <head>
+    <meta charset="UTF-8" />
+    <title>Halo Glow Beauty Salon in Muizenberg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Halo Glow Beauty is a calm, professional beauty salon located on Main Road in Muizenberg. We offer restorative facials, massage, waxing, manicures, pedicures, and body treatments designed to refresh the skin, relax the body, and gently uplift confidence."
+    />
 
-  <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta
+      property="og:title"
+      content="Halo Glow Beauty - Beauty Salon Muizenberg"
+    />
+    <meta
+      property="og:description"
+      content="Professional beauty treatments in Muizenberg. Facials, massage, manicures, waxing."
+    />
+    <meta
+      property="og:image"
+      content="/assets/images/haloglow-hero.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://haloglowbeauty.co.za"
+    />
+    <link rel="canonical" href="https://haloglowbeauty.co.za" />
 
-  <meta property="og:title" content="Halo Glow Beauty - Beauty Salon Muizenberg">
-  <meta
-    property="og:description"
-    content="Professional beauty treatments in Muizenberg. Facials, massage, manicures, waxing."
-  >
-  <meta property="og:image" content="/assets/images/haloglow-hero.webp">
-  <meta property="og:url" content="https://haloglowbeauty.co.za">
-  <meta property="og:type" content="website">
-</head>
-<body>
-  <div id="site-header"></div>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- include partials/header.html -->
+    <div id="header-include"></div>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" aria-label="Halo Glow Beauty hero">
-      <div class="hero-background"></div>
-      <div class="hero-overlay"></div>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="/assets/images/haloglow-hero.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/haloglow-hero.jpg"
+            alt="Calm facial treatment at Halo Glow Beauty salon in Muizenberg"
+            class="hero-image"
+          />
+        </picture>
+        <div class="hero-overlay"></div>
 
-      <div class="hero-content">
-        <p class="hero-eyebrow">Muizenberg, Cape Town</p>
-        <h1 class="hero-title">Soft-glow facials for tired, city skin.</h1>
-        <p class="hero-text">
-          Escape to a quiet treatment room where everything is warm towels, slow breathing,
-          and skin that looks softly lit when you walk out.
-        </p>
-        <div class="hero-cta">
-          <a href="https://wa.me/27737368023" class="btn-primary" target="_blank" rel="noopener noreferrer">
-            WhatsApp to book
-          </a>
-          <a href="#services" class="btn-secondary">
-            View treatments
-          </a>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Muizenberg, Cape Town</p>
+          <h1>Halo Glow Beauty Salon in Muizenberg</h1>
+          <p class="hero-subtitle">
+            Uplifting, rejuvenating beauty treatments for locals, visitors, and every stage of life.
+          </p>
+          <p class="hero-intro">
+            Halo Glow Beauty is a calm, professional beauty salon located on Main Road in Muizenberg.
+            We offer restorative treatments designed to refresh the skin, relax the body, and gently uplift confidence.
+          </p>
+          <div class="hero-cta-group">
+            <a
+              href="https://wa.me/27737368023"
+              class="btn-primary"
+              aria-label="Book on WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              Book on WhatsApp
+            </a>
+            <a
+              href="tel:+27737368023"
+              class="btn-secondary"
+              aria-label="Call Halo Glow Beauty"
+            >
+              Call 073 736 8023
+            </a>
+          </div>
         </div>
-        <p class="hero-note">
-          By appointment only &bull; 85 Main Road, Muizenberg
-        </p>
-      </div>
-    </section>
+      </section>
 
-    <!-- HOME SECTIONS -->
-    <section class="home-section" id="services">
-      <div class="container">
-        <h2>Everyday luxury for soft, glowing skin</h2>
-        <p>
-          Facials from R390 for radiant, healthy skin.
-        </p>
-      </div>
-    </section>
+      <section class="home-section home-intro">
+        <div class="container">
+          <h2>A Restorative Beauty Experience on Main Road, Muizenberg</h2>
+          <p>
+            Halo Glow Beauty was created to offer more than surface-level beauty.
+            Each treatment is designed to support skin health, physical relaxation, and emotional wellbeing.
+          </p>
+          <p>
+            From the moment you arrive, the environment encourages calm.
+            There is no rushing and no pressure.
+            Your experience is unhurried and personal.
+          </p>
+        </div>
+      </section>
 
-    <section class="home-section home-section-alt">
-      <div class="container">
-        <h2>Easy booking for visitors</h2>
-        <p>
-          Halo Glow Beauty is conveniently located on Main Road, Muizenberg. WhatsApp booking makes it simple for visitors without local numbers or apps.
-        </p>
-        <p>
-          Many guests book once, then return for regular treatments during their stay.
-        </p>
-      </div>
-    </section>
+      <section class="home-section home-difference">
+        <div class="container">
+          <h2>What Makes Halo Glow Beauty Different</h2>
+          <div class="difference-grid">
+            <article class="difference-card">
+              <h3>A slower, more intentional pace</h3>
+              <p>
+                Treatments are never rushed.
+                This allows your body to fully relax and your skin to respond better to care.
+              </p>
+            </article>
+            <article class="difference-card">
+              <h3>A focus on how you feel when you leave</h3>
+              <p>
+                Glow is not just about appearance.
+                It is about feeling restored, grounded, and confident again.
+              </p>
+            </article>
+            <article class="difference-card">
+              <h3>Comfort and results working together</h3>
+              <p>
+                Every treatment balances effectiveness with gentleness, ensuring visible results without discomfort or overwhelm.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="home-section">
-      <div class="container">
-        <h2>Treatment menu</h2>
-        <ul class="treatment-list">
-          <li>Signature Glow Facial &ndash; R390</li>
-          <li>Deep Cleanse Facial &ndash; R450</li>
-          <li>Express Facial &ndash; R290</li>
-          <li>Back Treatment &ndash; R490</li>
-          <li>Manicure &amp; Pedicure &ndash; from R250</li>
-          <li>Waxing Services &ndash; from R80</li>
-        </ul>
-        <p>
-          <a href="https://wa.me/27737368023" class="btn-primary" target="_blank" rel="noopener noreferrer">
-            Book your treatment
-          </a>
-        </p>
-      </div>
-    </section>
-  </main>
+      <section class="home-section home-stages">
+        <div class="container">
+          <h2>Beauty Treatments for Every Stage of Life</h2>
+          <p>
+            Halo Glow Beauty welcomes clients of all ages and backgrounds.
+            Each treatment is adapted to suit your skin, comfort level, and lifestyle.
+          </p>
 
-  <div id="site-footer"></div>
+          <div class="stages-grid">
+            <article class="stage-card">
+              <h3>For Teenagers</h3>
+              <p>
+                Teenage skin is sensitive and often changing.
+                Treatments at Halo Glow are gentle, age-appropriate, and carefully explained.
+              </p>
+              <p>
+                Teen clients receive calm guidance, respectful grooming, and a safe introduction to professional beauty care.
+                There is no embarrassment and no harsh correction.
+              </p>
+              <p>
+                Parents trust Halo Glow because care is professional, supportive, and appropriate.
+              </p>
+            </article>
 
-  <script src="/assets/js/include.js"></script>
-</body>
+            <article class="stage-card">
+              <h3>For Busy Adults</h3>
+              <p>
+                Stress shows on the skin and settles into the body.
+                Busy adults book Halo Glow Beauty to release tension, restore tired skin, and take real time to pause.
+              </p>
+              <p>
+                Facials revive dull complexions.
+                Massage eases physical and mental strain.
+                Grooming treatments make life feel more manageable.
+              </p>
+              <p>You leave feeling refreshed, not depleted.</p>
+            </article>
+
+            <article class="stage-card">
+              <h3>For Older Women</h3>
+              <p>
+                Mature skin benefits from kindness and consistency.
+                Halo Glow focuses on hydration, comfort, and gentle rejuvenation.
+              </p>
+              <p>
+                Treatments support elasticity and radiance without aggressive techniques.
+                Clients often describe feeling softer, brighter, and more at ease in their own skin.
+              </p>
+              <p>Beauty here is about vitality, not reversal.</p>
+            </article>
+
+            <article class="stage-card">
+              <h3>For Men</h3>
+              <p>
+                Men appreciate calm, professional environments where care feels straightforward and discreet.
+              </p>
+              <p>
+                Halo Glow offers massage to relieve tension, grooming services, and waxing treatments delivered with ease and respect.
+                There is no awkwardness and no unnecessary fuss.
+              </p>
+              <p>Just effective self-care in a relaxed setting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-tourists">
+        <div class="container">
+          <h2>Why Tourists Love Halo Glow Beauty</h2>
+
+          <div class="tourist-grid">
+            <article class="tourist-card">
+              <h3>A Restorative Reset While Visiting Muizenberg</h3>
+              <p>
+                Travel, sun, wind, and outdoor activities quickly affect the skin and body.
+                Tourists book Halo Glow Beauty to rehydrate sun-exposed skin, ease muscle fatigue, and feel polished during their stay.
+              </p>
+              <p>
+                Facials restore moisture and glow.
+                Massage releases travel tension.
+                Waxing and nail care help visitors feel refreshed and put together.
+              </p>
+            </article>
+
+            <article class="tourist-card">
+              <h3>Easy to Find and Easy to Book</h3>
+              <p>
+                Halo Glow Beauty is conveniently located on Main Road, Muizenberg.
+                WhatsApp booking makes it simple for visitors with limited time.
+              </p>
+              <p>Many tourists return more than once during their stay.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-treatments">
+        <div class="container">
+          <h2>Our Core Beauty Treatments in Muizenberg</h2>
+          <p>
+            Halo Glow Beauty offers a carefully selected range of treatments, including:
+          </p>
+          <ul class="treatment-list">
+            <li>
+              Facials for glow, hydration, deep cleansing, and skin renewal
+            </li>
+            <li>
+              Full body massage and back, neck, and shoulder massage
+            </li>
+            <li>
+              Waxing services including bikini, Brazilian, and Hollywood
+            </li>
+            <li>
+              Manicures and pedicures for healthy, well-groomed nails
+            </li>
+            <li>
+              Back scrubs and exfoliating body treatments
+            </li>
+          </ul>
+          <p>Every treatment is adapted to you. Nothing is one-size-fits-all.</p>
+        </div>
+      </section>
+
+      <section class="home-section home-visit">
+        <div class="container">
+          <h2>Visit Halo Glow Beauty</h2>
+          <h3 class="home-visit-address">89 Main Road, Muizenberg, 7945</h3>
+          <p>
+            Located in a calm coastal area with mountain views and fresh sea air, Halo Glow Beauty offers a peaceful pause in the middle of your day.
+          </p>
+        </div>
+      </section>
+
+      <section class="home-section home-book">
+        <div class="container">
+          <h2>Book Your Appointment</h2>
+          <h3>Simple WhatsApp booking</h3>
+          <p>
+            Appointments are booked quickly and personally via WhatsApp.
+            No apps. No complexity.
+            Just send a message and your time will be confirmed.
+          </p>
+          <div class="home-book-cta">
+            <a
+              href="https://wa.me/27737368023"
+              class="btn-primary"
+              aria-label="Book your appointment on WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              Book on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- include partials/footer.html -->
+    <div id="footer-include"></div>
+
+    <script src="/assets/js/include.js"></script>
+  </body>
 </html>

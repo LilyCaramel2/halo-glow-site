@@ -263,6 +263,19 @@ padding: 1rem 2rem;  display: flex;
   color: var(--cream);
 }
 
+/* Dark gradient overlay for text legibility */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(43, 24, 34, 0.4) 0%,
+    rgba(43, 24, 34, 0.6) 100%
+  );
+  z-index: 1;
+}
+
 .hero picture,
 .hero .hero-image {
   position: absolute;
@@ -363,21 +376,20 @@ padding: 0 1.75rem 4.25rem;  display: flex;
 
 .btn-secondary {
   border: 1px solid rgba(92, 52, 46, 0.3);
-  color: var(--rich-chocolate);
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
+background: rgba(43, 24, 34, 0.4);  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25)
+  
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  background: rgba(255, 255, 255, 0.8);
-  transform: translateY(-1px);
+background: rgba(43, 24, 34, 0.6); 
+  border-color: var(--cream);transform: translateY(-1px);
 }
 
 /* Hero responsive tweaks */
 @media (max-width: 767px) {
-  .hero {
-    min-height: 82vh;
+min-height: 65vh;
+  max-height: 700px;
   }
 
   .hero-content {
@@ -604,12 +616,10 @@ padding: 0 1.75rem 4.25rem;  display: flex;
   }
 }
 
-@media (min-width: 1024px) {
-  .services-grid {
+@media (min-width: 1200px) {  .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-
+@media (min-width: 1200px) {
 /* ------------ CONTACT PAGE ------------ */
 .contact-section {
   padding: 3rem 0 4rem;
@@ -771,8 +781,8 @@ padding: 0 1.75rem 4.25rem;  display: flex;
 }
 
 .footer-logo {
-  width: 280px;
-  height: auto;
+width: 200px;  height: auto;
+  opacity: 0.95;
 }
 
 .footer-heading {

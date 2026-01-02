@@ -89,8 +89,7 @@ main {
 .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 2rem;
-  display: flex;
+padding: 1rem 2rem;  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
@@ -280,8 +279,7 @@ main {
   z-index: 2;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3.75rem 1.75rem 4.25rem;
-  display: flex;
+padding: 0 1.75rem 4.25rem;  display: flex;
   flex-direction: column;
   justify-content: center;
   color: var(--cream);

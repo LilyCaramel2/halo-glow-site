@@ -328,7 +328,7 @@ main {
   }
 }
 
-/* ------------ Hero Section with Background Image ------------ */
+/* ------------ Hero Section with haloglow-hero.webp ------------ */
 .hero {
   position: relative;
   overflow: hidden;
@@ -344,7 +344,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/Halo%20Glow%20%E2%80%93%20Serene%20Facial%20Hero.png');
+  background-image: url('../images/haloglow-hero.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.35;
@@ -455,7 +455,7 @@ main {
   gap: 0.9rem;
 }
 
-/* ------------ PAGE HERO BANNER ------------ */
+/* ------------ PAGE HERO BANNER (NO BACKGROUND IMAGE) ------------ */
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -468,39 +468,16 @@ main {
   background: linear-gradient(135deg, #3d2517 0%, #5a3c4e 100%);
 }
 
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/Halo%20Glow%20%E2%80%93%20Towel%20%26%20Candle%20Detail.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  z-index: 0;
-}
-
 .page-hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(61, 37, 23, 0.65) 0%,
-    rgba(74, 44, 61, 0.75) 100%
+    rgba(61, 37, 23, 0.75) 0%,
+    rgba(74, 44, 61, 0.85) 100%
   );
   z-index: 1;
-}
-
-.page-hero picture,
-.page-hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 2;
-  opacity: 1;
 }
 
 .page-hero-content {

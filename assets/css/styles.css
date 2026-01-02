@@ -690,12 +690,12 @@ main {
   z-index: 1;
 }
 
-/* Cards with Glow and Hover Animations */
+/* Cards with Glow and Hover Animations - WIDER & SHORTER CARDS */
 .difference-grid,
 .stages-grid,
 .tourist-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.75rem;
   margin-top: 2rem;
 }
 
@@ -704,7 +704,7 @@ main {
 .tourist-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 240, 0.95) 100%);
   border-radius: var(--radius-soft);
-  padding: 2rem;
+  padding: 1.5rem 1.75rem;
   box-shadow: 0 10px 30px rgba(74, 44, 61, 0.15), 0 0 30px rgba(252, 205, 183, 0.2);
   border: 2px solid rgba(139, 58, 58, 0.25);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -742,41 +742,71 @@ main {
 .difference-card h3 {
   color: var(--burgundy);
   text-shadow: 0 2px 8px rgba(139, 58, 58, 0.2);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .stage-card h3 {
   color: var(--warm-brown);
   text-shadow: 0 2px 8px rgba(157, 107, 83, 0.2);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .tourist-card h3 {
   color: var(--burgundy);
   text-shadow: 0 2px 8px rgba(139, 58, 58, 0.2);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.difference-card p,
+.stage-card p,
+.tourist-card p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .treatment-list {
-  margin: 1.25rem 0 0.5rem;
+  margin: 0.85rem 0 0.4rem;
   padding-left: 1.1rem;
 }
 
 .treatment-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
   color: var(--rich-chocolate);
+  font-size: 0.9rem;
 }
 
 .home-visit-address {
-  margin-top: 0.75rem;
+  margin-top: 0.65rem;
   color: var(--rich-chocolate);
+  font-size: 0.9rem;
 }
 
 .home-book-cta {
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
 }
 
-/* Responsive grids */
+/* Responsive grids - 3 COLUMNS FOR WIDER CARDS */
 @media (min-width: 720px) {
   .difference-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stages-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tourist-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 480px) and (max-width: 719px) {
+  .difference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .stages-grid {

@@ -389,8 +389,10 @@ background: rgba(43, 24, 34, 0.6);
 
 /* Hero responsive tweaks */
 @media (max-width: 767px) {
+    .hero {
 min-height: 65vh;
   max-height: 700px;
+        }
   }
 
   .hero-content {
@@ -617,10 +619,12 @@ min-height: 65vh;
   }
 }
 
-@media (min-width: 1200px) {  .services-grid {
+@media (min-width: 1200px) {  
+.services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-@media (min-width: 1200px) {
+
+  }
 /* ------------ CONTACT PAGE ------------ */
 .contact-section {
   padding: 3rem 0 4rem;

@@ -120,6 +120,36 @@ main {
   filter: blur(40px);
 }
 
+/* ------------ CURVED DIVIDERS with COLORS ------------ */
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wave fill colors matching brand palette */
+.wave-peach {
+  fill: var(--peach);
+}
+
+.wave-blush {
+  fill: var(--blush);
+}
+
+.wave-cream {
+  fill: var(--cream);
+}
+
 /* ------------ SLIMMER Header with Medium Plum ------------ */
 .site-header {
   position: sticky;

@@ -10,10 +10,11 @@
   >
 
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
 
   <meta property="og:title" content="Services & Treatments - Halo Glow Beauty">
   <meta property="og:description" content="View our full menu of beauty treatments in Muizenberg including facials, massage, waxing, and pamper packages.">
-  <meta property="og:image" content="/assets/images/haloglow-hero.webp">
+  <meta property="og:image" content="/assets/images/services-hero.webp">
   <meta property="og:url" content="https://haloglowbeauty.co.za/services.html">
   <meta property="og:type" content="website">
 
@@ -27,11 +28,22 @@
   <div id="header-include"></div>
 
   <main>
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-      <div class="container">
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero" aria-label="Services hero banner">
+      <picture>
+        <source
+          srcset="/assets/images/services-hero.webp"
+          type="image/webp"
+        />
+        <img
+          src="/assets/images/services-hero.jpg"
+          alt="Professional manicure and pedicure services at Halo Glow Beauty"
+          class="page-hero-image"
+        />
+      </picture>
+      <div class="page-hero-content">
         <h1>Our Treatments</h1>
-        <p class="subtitle">Beauty sanctuary in Muizenberg</p>
+        <p class="hero-subtitle">Professional beauty services in the heart of Muizenberg</p>
       </div>
     </section>
 
@@ -283,5 +295,6 @@
   </a>
 
   <script src="/assets/js/include.js"></script>
+  <script src="/assets/js/cookie-consent.js"></script>
 </body>
 </html>

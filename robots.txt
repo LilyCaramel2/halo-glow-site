@@ -1,0 +1,15 @@
+# Halo Glow Beauty - robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Block admin/system directories if any exist
+Disallow: /admin/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://haloglowbeauty.co.za/sitemap.xml
+
+# Crawl-delay (optional, helps prevent overload)
+Crawl-delay: 1

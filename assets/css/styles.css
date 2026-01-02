@@ -120,7 +120,7 @@ main {
   filter: blur(40px);
 }
 
-/* ------------ Header with Medium Plum ------------ */
+/* ------------ SLIMMER Header with Medium Plum ------------ */
 .site-header {
   position: sticky;
   top: 0;
@@ -134,7 +134,7 @@ main {
 .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -153,18 +153,18 @@ main {
 
 .site-logo {
   display: block;
-  width: 280px;
+  width: 220px;
   height: auto;
   filter: drop-shadow(0 2px 8px rgba(252, 205, 183, 0.3));
 }
 
 @media (max-width: 767px) {
   .site-logo {
-    width: 180px;
+    width: 160px;
   }
   
   .header-inner {
-    padding: 1.25rem 1.5rem;
+    padding: 0.7rem 1.5rem;
   }
 }
 
@@ -254,8 +254,8 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.4rem;
-  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   border-radius: 999px;

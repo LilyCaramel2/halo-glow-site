@@ -31,5 +31,5 @@ function loadPartial(containerId, partialPath) {
 }
 
 // Load header and footer
-loadPartial('header-include', '/partials/header.html');
-loadPartial('footer-include', '/partials/footer.html');
+loadPartial('header-include', '/halo-glow-site/partials/header.html');
+loadPartial('footer-include', '/halo-glow-site/partials/footer.html');

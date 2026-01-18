@@ -61,13 +61,16 @@ h1 {
   font-weight: 400;
 }
 
+/* ADJUSTED H2 - smaller and tighter */
 h2 {
   font-family: 'Playfair Display', 'Times New Roman', serif;
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.1rem);
   font-weight: 600;
   color: var(--burgundy);
   text-shadow: 0 2px 10px rgba(139, 58, 58, 0.25);
   animation: headerGlow 3s ease-in-out infinite alternate;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 @keyframes headerGlow {
@@ -79,9 +82,10 @@ h2 {
   }
 }
 
+/* ADJUSTED H3 - smaller */
 h3 {
   font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--warm-brown);
 }
@@ -708,9 +712,12 @@ main {
   background: linear-gradient(135deg, #c4a89a 0%, #b89585 100%);
 }
 
+/* CENTER SECTION TEXT */
 .home-section p {
-  margin: 0 0 0.9rem;
+  margin: 0 auto 0.9rem;
   color: var(--rich-chocolate);
+  text-align: center;
+  max-width: 800px;
 }
 
 /* Add animated decorative blobs */
@@ -743,7 +750,7 @@ main {
   z-index: 1;
 }
 
-/* Cards with Glow and Hover Animations - WIDER & SHORTER CARDS */
+/* Cards with Glow and Hover Animations - REDUCED PADDING */
 .difference-grid,
 .stages-grid,
 .tourist-grid {
@@ -757,7 +764,7 @@ main {
 .tourist-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 240, 0.95) 100%);
   border-radius: var(--radius-soft);
-  padding: 1.5rem 1.75rem;
+  padding: 1.2rem 1.4rem;
   box-shadow: 0 10px 30px rgba(74, 44, 61, 0.15), 0 0 30px rgba(252, 205, 183, 0.2);
   border: 2px solid rgba(139, 58, 58, 0.25);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -795,21 +802,21 @@ main {
 .difference-card h3 {
   color: var(--burgundy);
   text-shadow: 0 2px 8px rgba(139, 58, 58, 0.2);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
 .stage-card h3 {
   color: var(--warm-brown);
   text-shadow: 0 2px 8px rgba(157, 107, 83, 0.2);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
 .tourist-card h3 {
   color: var(--burgundy);
   text-shadow: 0 2px 8px rgba(139, 58, 58, 0.2);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
@@ -919,12 +926,13 @@ main {
 
 .service-category h2 {
   margin: 0 0 1.75rem;
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   color: var(--burgundy);
   padding-bottom: 1rem;
   border-bottom: 3px solid rgba(139, 58, 58, 0.35);
   text-shadow: 0 2px 10px rgba(139, 58, 58, 0.25), 0 0 20px rgba(252, 205, 183, 0.3);
   animation: headerGlow 3s ease-in-out infinite alternate;
+  text-align: left;
 }
 
 .service-category-highlight {
@@ -983,7 +991,7 @@ main {
 
 .service-subsection h3 {
   margin: 0 0 1rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--warm-brown);
   text-shadow: 0 1px 5px rgba(157, 107, 83, 0.2);
 }
@@ -1146,11 +1154,12 @@ main {
 
 .contact-block h2 {
   margin: 0 0 1.5rem;
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   color: var(--burgundy);
   padding-bottom: 1rem;
   border-bottom: 3px solid rgba(139, 58, 58, 0.35);
   text-shadow: 0 2px 10px rgba(139, 58, 58, 0.25), 0 0 20px rgba(252, 205, 183, 0.3);
+  text-align: left;
 }
 
 .contact-methods {
@@ -1238,7 +1247,7 @@ main {
 }
 
 .contact-services-list li::before {
-  content: '✦';
+  content: '\u2726';
   position: absolute;
   left: 0;
   color: var(--burgundy);
@@ -1265,7 +1274,7 @@ main {
 .location-features h3,
 .booking-info h3 {
   color: var(--warm-brown);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.75rem;
   text-shadow: 0 1px 5px rgba(157, 107, 83, 0.2);
 }
